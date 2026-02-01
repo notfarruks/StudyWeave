@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.auth-container {
+  max-width: 440px;
+  margin: 72px auto;
+  padding: 32px;
+  border-radius: 18px;
+  border: 1px solid hsl(var(--border));
+  background:
+    radial-gradient(circle at 20% 20%, rgba(64, 116, 255, 0.08), transparent 40%),
+    radial-gradient(circle at 82% 0%, rgba(23, 185, 155, 0.10), transparent 38%),
+    hsl(var(--card));
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.14),
+    0 4px 16px rgba(15, 23, 42, 0.08);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-form input,
+.auth-form select,
+.auth-form button {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.auth-form button {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  color: hsl(var(--primary-foreground));
+  border: none;
+  font-weight: 600;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.auth-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.auth-form button:disabled {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.users-table {
+  margin-top: 30px;
+}
+
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.users-table th {
+  background-color: hsl(var(--muted));
+  font-weight: 700;
+}
+
+@layer base {
+  :root {
+    --background: 220 26% 97%;
+    --foreground: 222 47% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 12%;
+    --primary: 225 85% 55%;
+    --primary-foreground: 214 32% 98%;
+    --secondary: 220 16% 92%;
+    --secondary-foreground: 222 47% 14%;
+    --muted: 220 14% 90%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 166 65% 42%;
+    --accent-foreground: 168 25% 12%;
+    --destructive: 357 74% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 16% 86%;
+    --input: 220 16% 86%;
+    --ring: 225 85% 55%;
+    --chart-1: 225 82% 52%;
+    --chart-2: 166 65% 42%;
+    --chart-3: 37 92% 55%;
+    --chart-4: 12 86% 56%;
+    --chart-5: 288 60% 60%;
+    --radius: 0.75rem;
+    color-scheme: light;
+  }
+
+  .dark {
+    --background: 222 22% 7%;
+    --foreground: 210 40% 96%;
+    --card: 222 24% 10%;
+    --card-foreground: 210 40% 96%;
+    --popover: 222 24% 10%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 221 75% 68%;
+    --primary-foreground: 221 36% 10%;
+    --secondary: 222 15% 16%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 223 14% 18%;
+    --muted-foreground: 223 12% 70%;
+    --accent: 163 57% 44%;
+    --accent-foreground: 163 24% 10%;
+    --destructive: 357 74% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 18% 18%;
+    --input: 222 18% 18%;
+    --ring: 221 75% 68%;
+    --chart-1: 221 75% 68%;
+    --chart-2: 163 57% 44%;
+    --chart-3: 37 92% 55%;
+    --chart-4: 12 86% 56%;
+    --chart-5: 288 60% 60%;
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Space Grotesk", "Inter", system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+    background-image:
+      radial-gradient(1200px at 18% 18%, rgba(64, 116, 255, 0.06), transparent 45%),
+      radial-gradient(900px at 82% 0%, rgba(23, 185, 155, 0.08), transparent 42%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 62%, hsl(var(--card)) 100%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Space Grotesk", "Inter", system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: rgba(64, 116, 255, 0.35);
+    color: hsl(var(--foreground));
+  }
+
+  input::selection,
+  textarea::selection,
+  .auth-form input::selection {
+    background: rgba(64, 116, 255, 0.5);
+    color: hsl(var(--foreground));
+  }
+}
