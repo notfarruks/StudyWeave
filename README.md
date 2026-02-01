@@ -1,32 +1,39 @@
-🕸️ StudyWeave  
+# 🕸️ StudyWeave  
 **Research Analytics & Artifact Evaluation Platform**
 
 A scalable **human-in-the-loop (HITL)** platform for evaluating **AI-generated vs. human-written software artifacts**.
 
-🚀 Overview
+---
+
+## 🚀 Overview
 
 **StudyWeave** is a full-stack research management system designed to address the *“black box”* problem in AI-assisted software engineering. It enables **blinded, side-by-side evaluations** of software artifacts (code, UML diagrams, test cases) to assess **readability, maintainability, and correctness**.
 
 Unlike basic survey tools, StudyWeave provides a **complete research lifecycle platform**, featuring a custom competency engine, real-time analytics dashboards, and automated AI-powered result summarization.
 
-⚡ Key Features
+---
 
-🤖 AI & Intelligence
+## ⚡ Key Features
+
+### 🤖 AI & Intelligence
 - **Automated Summarization**  
   Integrated LLM services generate concise textual summaries of study results, enabling rapid insight extraction from complex datasets.
 
 - **Smart Reporting**  
   Automated generation of professional **PDF and CSV reports** for offline analysis and publication.
 
+---
 
-📊 Analytics & Visualization
+### 📊 Analytics & Visualization
 - **Custom SVG Dashboards**  
   A high-performance analytics engine built without heavy third-party libraries to render participant competency matrices and study progress in real time.
 
 - **Anomaly Detection**  
   Algorithms automatically flag irregular behaviors such as speed-running participants or inconsistent evaluation patterns.
 
-🛡️ Security & Architecture
+---
+
+### 🛡️ Security & Architecture
 - **Role-Based Access Control (RBAC)**  
   Secure, clearly separated workflows for:
   - Researchers (study creation)
@@ -36,14 +43,18 @@ Unlike basic survey tools, StudyWeave provides a **complete research lifecycle p
 - **Study “Time Travel”**  
   Snapshot-based versioning of study configurations prevents data corruption during active research phases.
 
-🎨 Advanced UX
+---
+
+### 🎨 Advanced UX
 - **Customizable Dashboards**  
   Researchers can rearrange widgets, enable dark mode, and persist UI preferences using PostgreSQL and LocalStorage.
 
 - **Blinded Evaluation Mode**  
   A specialized interface removes author metadata from artifacts to ensure unbiased A/B testing.
 
-🛠️ Tech Stack
+---
+
+## 🛠️ Tech Stack
 
 | Domain | Technologies |
 |------|-------------|
@@ -53,30 +64,39 @@ Unlike basic survey tools, StudyWeave provides a **complete research lifecycle p
 | Auth & Security | JWT (JSON Web Tokens), SMTP email verification |
 | DevOps | Docker, GitHub Actions (CI/CD) |
 
-📸 Screenshots
+---
+
+## 📸 Screenshots
 
 **Researcher Dashboard**
 
-<img width="3304" height="1628" alt="image" src="https://github.com/user-attachments/assets/b2358cc5-b0dc-4c0c-8b98-5793a37d45b7" />
+<img width="3304" height="1628" alt="image" src="https://github.com/user-attachments/assets/b06f5a92-8355-4134-9bc6-d7e51d9afd4c" />
 
-<img width="3318" height="1566" alt="image" src="https://github.com/user-attachments/assets/0e62bdc1-39d2-4225-9be7-8850cbf46587" />
+<img width="3318" height="1566" alt="image" src="https://github.com/user-attachments/assets/d1402438-8996-4b69-91fb-ea317ef2bdf1" />
 
+```
 
 screenshots/
 ├── dashboard-1.png
 ├── dashboard-2.png
 ├── analytics-view.png
 
-⚙️ Installation & Configuration
+````
 
-Clone the Repository
+---
+
+## ⚙️ Installation & Configuration
+
+### Clone the Repository
 ```bash
 git clone https://github.com/notfarruks/StudyWeave.git
 ````
 
 Install dependencies in **both** `server` and `client` directories.
 
-Backend Setup
+---
+
+### Backend Setup
 
 ```bash
 cd server
@@ -116,7 +136,9 @@ GEMINI_API_KEY=your_google_genai_api_key
 GEMINI_LLM_NAME=gemini-2.5-flash
 ```
 
-Database Initialization
+---
+
+### Database Initialization
 
 Run the following inside the `server` directory:
 
@@ -128,25 +150,29 @@ npx sequelize-cli db:migrate
 npx sequelize-cli db:seed:all
 ```
 
-Frontend Setup
+---
+
+### Frontend Setup
 
 ```bash
 cd client
 npm install
 ```
 
-🚀 Usage
+---
+
+## 🚀 Usage
 
 You must run **two terminal processes simultaneously**.
 
-Terminal 1 — Start Backend
+### Terminal 1 — Start Backend
 
 ```bash
 cd server
 npm run dev
 ```
 
-Terminal 2 — Start Frontend
+### Terminal 2 — Start Frontend
 
 ```bash
 cd client
@@ -159,7 +185,9 @@ The application will be available at:
 http://localhost:5173
 ```
 
-👥 Contributors
+---
+
+## 👥 Contributors
 
 * **Zaeem Masood Sheikh** — Full Stack Architect & Analytics Engine
 * **Ali Demir**
@@ -168,3 +196,4 @@ http://localhost:5173
 * **Farrukh Mammadov**
 
 ---
+
